@@ -49,3 +49,38 @@ body {
 }
 
 /*----- Tvoje styly ------*/
+.contact:nth-child(2n) {
+  background-color: white;
+}
+/*Fotografii přidej 3px silný rámeček barvy lightblue. Dej pozor, aby se rámeček nepřidal i ikonám.*/
+section > img {
+  border: 3px solid lightblue;
+}
+/* Nastyluj ikony, tak aby se při najetí myši:
+ikonka zvětšila. Použij pro to vlasnost a hodnotu transform: scale(1.3); */ /*nápověda: mají rodiče div, fotka obličeje má rodiče jiného (section)*/
+
+/*takto je to s použitím třídy a sdlouhavě */
+/* .call:hover {
+  transform: scale(1.3);
+}
+
+.message:hover {
+  transform: scale(1.3); 
+}*/
+
+/* takto je to s použití třídy krátce
+.call:hover,
+.message:hover {
+  transform: scale(1.3);
+} */
+/*kurzor změnil na pointer/ručičku (vlasnost cursor)
+Dej pozor, aby se změny na najetí myši neprojevily i na fotografii.*/
+/* .call:hover,
+.message:hover {
+  cursor: pointer;
+} */
+/*řešení bez použití třídy*/
+div img:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
